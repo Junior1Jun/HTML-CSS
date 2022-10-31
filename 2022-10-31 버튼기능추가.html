@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지(Mobile)</title>
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@700&display=swap');
+     li{list-style: none;}
+     a{text-decoration: none;}
+     *{margin:0px; padding: 0px;}
+     body{font-family:'Times New Roman', Times, serif;}
+     #header{
+        text-align: center;
+        background-image: url(image/header_background.png);
+        display: flex;
+        justify-content: space-between;
+        color:white;
+    }
+    #header>a{
+        left: 5px; 
+        top: 7px;
+        border: 1px solid white;
+    }
+    #header>label{
+        right: 5px;
+        top:7px;
+        border: 1px solid white;
+    }
+
+    #many_buttons>div>a{
+                display:block;
+                padding:2px 10px;
+                border:1px solid black;
+                width:110px;
+                text-align:center;
+            }
+    #button_4{
+        background-color: tomato;
+    }
+    #button_4>ul>li>a{
+                display:block;
+                padding:15px 10px;
+                width:350px;
+                text-align:center;
+                color:white;
+            }
+    #button_5{
+        border-bottom: 2px solid black;
+    }
+    #button_5>ul{
+        display: flex;
+    }
+    #button_5>ul>li>a{
+                display:block;
+                padding:15px 10px;
+                width:300px;
+                text-align:center;
+            }
+    #section{
+        border-bottom: 4px solid black;
+    }
+    #footer{
+        text-align:center;
+    }
+    input:nth-of-type(1){
+        display: none;
+    }
+    input:nth-of-type(1)+nav{
+        display:none;
+    } 
+    input:nth-of-type(1):checked+nav{
+        display:flex;
+    } 
+    input:nth-of-type(1)~div>ul{
+        display:none;
+    }
+    input:nth-of-type(1):checked~div>ul{
+        display:flex;
+    }
+
+
+</style>
+<body>
+    <header id="header">
+        <label for="second"><a><img src="image/header_left_button.png"></a></label>
+        <h1>Mobile</h1>
+        <label for="second"><img src="image/header_right_button.png"></label>                  
+    </header>
+    <input type="checkbox" id="second" checked="checked">
+    <nav id="many_buttons">
+        <div><a href="#">버튼1</a></div>
+        <div><a href="#">버튼2</a></div>
+        <div><a href="#">버튼3</a></div>
+        <div><a href="#">버튼4</a></div>
+        <div><a href="#">버튼5</a></div>
+        <div><a href="#">버튼6</a></div>
+        <div><a href="#">버튼7</a></div>
+        <div><a href="#">버튼8</a></div> 
+    </nav>
+    <div id="button_4">
+        <ul>
+            <li><a href="#">버튼<b>A</b></a></li>
+            <li><a href="#">버튼<b>B</b></a></li>
+            <li><a href="#">버튼<b>C</b></a></li>
+            <li><a href="#">버튼<b>D</b></a></li>
+        </ul>
+    </div>
+    <div id="button_5">
+        <ul>
+            <li><a href="#">버튼</a></li>
+            <li><a href="#">버튼</a></li>
+            <li><a href="#">버튼</a></li>
+            <li><a href="#">버튼</a></li>
+            <li><a href="#">버튼</a></li>
+        </ul>
+    </div>
+    <section id="section">
+        <p>
+           <h1>Loam ipsum</h1>
+           2012-12-09
+        </p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p><br>
+    </section>
+    <footer id="footer">
+        <h2>HTML5 + CSS Basic</h2>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+</html>
