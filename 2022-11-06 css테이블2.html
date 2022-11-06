@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table-만들기-css적용2</title>
+    <style>
+        #table{
+             margin:0px auto;
+             width: 300px;
+             height: 300px;
+             border-collapse:collapse
+        }
+        #table>caption{
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+
+        }
+        #table>thead{
+            background-color: rgb(0, 0, 255);
+            color: olivedrab;
+            text-align: center;
+            height: 40px;
+        }
+        #table>thead>tr>td{
+            width: 100px;
+        }
+        #tbody{
+            text-align: center;
+        }
+        #tbody>tr>td{
+            padding-right: 10px;
+            height: 20px;
+            width: 100px;
+            border-bottom: 1px solid black;
+
+        }
+        #table>tfoot{
+            background-color: rgb(0, 0, 255);
+            color: white;
+            text-align: center;
+            height: 40px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>표 테두리 제어,border</h2>
+    <hr>
+    <h3>table 만들기</h3>
+    <hr>
+    <div>
+        <table id="table">
+            <caption style="font-family:cursive;"><big>성적표</big></caption>
+            <thead>
+                <tr>
+                    <td>이름</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td class="name">황기태</td>
+                    <td>80</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td class="name">이재문</td>
+                    <td>95</td>
+                    <td>99</td>
+                </tr>
+                <tr>
+                    <td class="name">이병은</td>
+                    <td>85</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td class="name">김남윤</td>
+                    <td>50</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td class="name">정남주</td>
+                    <td>50</td>
+                    <td>40</td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>합</td>
+                    <td>360</td>
+                    <td>289</td>
+                </tr>
+            </tfoot>
+        
+            
+        </table>
+    </div>
+</body>
+</html>
