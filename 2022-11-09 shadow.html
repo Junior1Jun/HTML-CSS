@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="'viewport" content="'width=device-width, initial-scale=1.0">
+    <title>shadow(그림자)</title>
+    <style>
+        *{margin:0px;padding:0px;}
+        body,html{margin:50px auto;}
+        h3{text-align:center;}
+        p{
+            margin:20px auto;
+            width:200px;
+            height:30px;
+            font-size:30px;
+        }
+        .a{text-shadow:3px 3px red;}
+        .b{text-shadow:0px 0px 5px blue;}
+        .c{
+            text-shadow:0px 0px 5px black;
+            color:white;
+        }
+        div{margin:30px auto;
+            width:300px;
+            height:100px;
+            border:2px solid black;
+            background-color: orange;
+        }
+        .k1{box-shadow:10px 10px red;}
+        .k2{box-shadow:-5px -5px black;}
+        .k3{box-shadow:10px 10px 10px rgb(0,255,0);}
+        .k4{box-shadow:5px 5px 0px 0px blue, -5px -5px 5px 5px red;}
+
+
+    </style>
+</head>
+
+<body>
+    <h3>텍스트 그림자 만들기</h3>
+    <p class="a">Red Shadow</p>
+    <p class="b">Grow Effect</p>
+    <p class='c'>WordArtEffect</p>
+
+    <h3>박스에 그림자 만들기</h3>
+    <div class="k1">box-shadow:10px 5px</div>
+    <div class="k2">box-shadow:-5px -5px</div>
+    <div class="k3">box-shadow:10px 10px 10px</div>
+    <div class="k4">box-shadow:5px 5px 5px 5px gray inset</div>
+
+</body>
+</html>
