@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_1_simentic</title>
+    <style>
+        /*전체 선택자*/
+       *{margin: 0px;}
+       html,body{text-align: center;}
+       /*태그 선택자*/
+       h1{
+        font-family: 'Times New Roman', Times, serif;/* 글꼴 */
+        font-style: italic;
+       }
+       /*id,class 선택자*/
+       #header{
+        color: blueviolet;
+       }
+       #header .wrap1{
+        background-color:aqua;
+       }
+       #header>.wrap1>h2{
+        color: black;
+       }
+       #header>.wrap2{
+        background-color: aquamarine;
+       }
+       #header>.wrap2>h3{
+        color: black;
+       }
+       /*속성 선택자*/
+       #k1>form>input[type='text']{
+        background-color: aliceblue;
+       }
+       #k1>form>input[type='password']{
+        background-color: bisque;
+       }
+       #k1>form>input[type='email']{
+        background-color: burlywood;
+       }
+       #k2>img{
+        width:200px;
+        height:250px;
+       }
+       /*문자열 속성 선택자*/
+       #k2>img[src$='gif']{
+        border: 3px solid red;
+       }
+       #k2>img[src$='jpg']{
+        border: 3px solid blue;
+       }
+       #k2>img[src$='png']{
+        border: 3px solid black;
+       }
+       /*후손 선택자*/
+       #k3 p{
+        color:red;
+       }
+       /*자식 선택자*/
+       #k3>p{
+        border: 1px solid black;
+        width: 200px;
+        padding: 30px; /*글자와 상자(border) 간의 거리*/
+        margin: 30px 0px;/*위아래 30px 좌우 0px*/
+       }
+       /*동위선택자와 반응 선택자*/
+       #k4>h3+h4{    /*h3 아래에 있는 h4 한개*/
+        color:aqua;
+       }
+       #k4>h5~h4{
+        color:chocolate; /*h5아래에 있는 h4*/
+       }
+       /*반응 선택자*/
+       #k4>h2:hover{      /*k4의 h2에 마우스를 올려놓으면*/
+        background-color: darkgrey;
+       }
+       #k4>h3:active{     /*k4의 h2에 마우스클릭하면*/
+        background-color: cadetblue;
+       }
+       /*상태 선택자*/
+       #k1>form>input:focus{    /*k1에 마우스 커서를 올려놓으면*/
+        background-color: orange;
+       }
+       /*일반 구조 선택자(:first-child, :nth-child)*/
+       #k5>ul>li:first-child{
+        color:darkorange;
+       }
+       #k5>ul>li:last-child{
+        color:blue;
+       }
+       #k5>ul>li:nth-child(2n){    /*2n >> 짝수 번째 , 2n+1 >> 홀수 번째*/
+        background-color: aqua;    
+       } 
+       #k5>ul>li:nth-child(5){
+        background-color: brown;
+       }
+       /*형태 구조 선택자*/
+       #k6>h3:first-of-type{
+        color:blue;
+       }
+       #k6>h1:last-of-type{
+        color:red;
+       }
+       /*문자 선택자*/
+       #k7>p::first-letter{
+        font-size:50px;
+       }
+       #k7>p::first-line{
+        background-color: blue;
+       }
+       /*반응 문자 선택자*/
+       #k8>p::selection{
+        background-color: black;
+        color:white;
+       }
+       /*링크 선택자*/
+       #k9>a{
+        text-decoration: none;
+       }
+       #k9>a:link{
+        color:coral;
+       }
+       #k9>a:visited{
+        color:black;
+       }
+       /*부정 선택자*/
+       #k10>form>input:not([type='pass']){
+        background-color: blueviolet;
+       }
+
+
+    </style>
+
+</head>
+<body>
+    <h1>id(#),class(.)</h1>
+    <header id="header">
+        <div class="wrap1">
+            <h2>wrap1-1</h2>
+            <h3>wrap1-2</h3>
+        </div>
+        <div class="wrap2">
+            <h2>wrap2-1</h2>
+            <h3>wrap2-2</h3>
+        </div>
+
+    </header><br><br>
+    <hr>
+    <h1>기본 속성 선택자</h1>
+    <div id="k1">
+        <form>
+            <input type="text" name="name" value="jang"><br>
+            <input type="password" name="pass" value="1212343456"><br>
+            <input type="email" name="email" value="id@host">
+        </form>
+    </div><br><br>
+    <hr>
+    <h1>문자열 속성 선택자</h1>
+    <div id="k2">
+        <img src="image/book.gif">
+        <img src="image/book.jpg">
+        <img src="image/book.png">
+    </div><br><br>
+    <hr>
+    <h1>후손/자손 선택자</h1>
+    <div id="k3">
+        <p>과일 상자</p>
+        <div>
+            <p>사과상자</p>
+            <P>배 상자</P>
+        </div>
+        <h3>hello?</h3>
+        <p>hi?</p>
+    </div><br><br>
+    <hr>
+    <h1>동위선택자와 반응 선택자</h1>
+    <div id="k4">
+        <h3>header-sub1</h3>
+        <h4>header-sub2</h4>
+        <h4>header-sub3</h4>
+        <h5>header-sub4</h5>
+        <h2>header-sub5</h2>
+        <h4>header-sub6</h4>
+        <h4>header-sub7</h4>
+
+    </div><br><br>
+    <hr>
+    <h1>일반 구조 선택자</h1>
+    <div id="k5">
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+            <li>Sixth</li>
+            <li>Seventh</li>
+        </ul>
+    </div><br><br>
+    <hr>
+    <h1>형태구조 선택자</h1>
+    <div id="k6">
+        <h1>type1</h1>
+        <h2>type2</h2>
+        <h3>type3</h3>
+        <h3>type4</h3>
+        <h2>type5</h2>
+        <h1>type6</h1>
+    </div><br><br>
+    <hr>
+    <h1>문자 선택자</h1>
+    <div id="k7">
+        <h3>apple</h3>
+        <p>tomato<br>
+            apple
+        </p>
+        <p>
+            orange<br>
+            kiwi<br>
+            strawberry<br>
+            mango
+        </p>
+    </div><br><br>
+    <hr>
+    <h1>반응 문자 선택자</h1>
+    <div id="k8">
+        <h3>진달래꽃-김소월</h3>
+        <p>나 보기가 엮겨워</p>
+        <p>죽어도 아니 눈물 흘리오리다</p>
+    </div><br><br>
+    <hr>
+    <h1>링크 선택자</h1>
+    <div id="k9">
+        <a href="https://www.youtube.com/">유튭</a><br>
+        <a href="https://maplestory.nexon.com/Home/Main">비밀</a><br>
+        <a href="https://www.naver.com">네이버</a>
+    </div><br><br>
+    <hr>
+    <h1>부정 선택자</h1>
+    <div id="k10">
+        <form>
+            <input type="text"><br>
+            <input type="pass"><br>
+            <input type="url"><br>
+            <input type="time">
+        </form>
+    </div>
+
+</body>
+</html>
