@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width:300px;
+            height:300px;
+            border : 1px solid black;
+        }
+    </style>
+
+    <script>
+        function radioInnerHTML(){
+            var radioset = document.getElementsByName('radioset');
+            for(var i = 0; i < radioset.length; i++){
+                if (radioset[i].checked == true){
+                    document.getElementById("test_div").innerHTML = radioset[i].value;
+                }
+            }
+            
+        }
+
+        function startclock(){
+            setInterval("radioInnerHTML()",10);
+        }
+    </script>
+</head>
+<body onload = 'startclock()'>  
+      <br><br>
+      <input type = 'radio' name = 'radioset' value = "1">
+      <input type = 'radio' name = 'radioset' value = "2">
+      <input type = 'radio' name = 'radioset' value = "3">
+      <div id='test_div'>
+        
+      </div>
+
+</body>
+</html>
